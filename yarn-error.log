@@ -1,30 +1,25 @@
 Arguments: 
-  C:\laragon\bin\nodejs\node-v12\node.exe C:\Users\neeel\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add holder.js --save
+  C:\Program Files\nodejs\node.exe C:\Users\neeel\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js remove routes
 
 PATH: 
-  C:\Users\neeel\AppData\Local\Yarn\config\global\node_modules\.bin;C:\Users\neeel\AppData\Roaming\npm;C:\Users\neeel\AppData\Roaming\Composer\vendor\bin;;C:\laragon\bin\laragon\utils;C:\laragon\bin\mysql\mysql-5.7.24-winx64\bin;C:\laragon\bin\php\php-7.2.19-Win32-VC15-x64;C:\laragon\bin\composer;C:\laragon\bin\apache\httpd-2.4.35-win64-VC15\bin;C:\laragon\bin\redis\redis-x64-3.2.100;C:\laragon\bin\nodejs\node-v12;C:\laragon\bin\nginx\nginx-1.16.0;C:\laragon\bin\notepad++;C:\laragon\bin\telnet;C:\laragon\bin\ngrok;C:\laragon\bin\git\bin;C:\laragon\bin\git\cmd;C:\laragon\bin\git\usr\bin;C:\laragon\bin\git\mingw64\bin;C:\laragon\bin;C:\laragon\usr\bin;C:\laragon\bin\putty;C:\laragon\bin\cmder\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\composer;C:\Users\neeel\AppData\Local\Microsoft\WindowsApps;C:\Users\neeel\AppData\Roaming\npm;C:\php;C:\Users\neeel\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\neeel\AppData\Roaming\Composer\vendor\bin;C:\Users\neeel\vendor;;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\share\vim\vim74;C:\laragon\bin\cmder\;
+  C:\Users\neeel\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\neeel\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\composer;C:\Users\neeel\AppData\Local\Microsoft\WindowsApps;C:\Users\neeel\AppData\Roaming\npm;C:\php;C:\Users\neeel\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\neeel\AppData\Roaming\Composer\vendor\bin;C:\Users\neeel\vendor;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
 
 Yarn version: 
   1.22.17
 
 Node version: 
-  12.5.0
+  14.15.4
 
 Platform: 
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/holder.js: Not found
-      at Request.params.callback [as _callback] (C:\Users\neeel\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:67029:18)
-      at Request.self.callback (C:\Users\neeel\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140883:22)
-      at Request.emit (events.js:200:13)
-      at Request.<anonymous> (C:\Users\neeel\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141855:10)
-      at Request.emit (events.js:200:13)
-      at IncomingMessage.<anonymous> (C:\Users\neeel\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141777:12)
-      at Object.onceWrapper (events.js:288:20)
-      at IncomingMessage.emit (events.js:205:15)
-      at endReadableNT (_stream_readable.js:1154:12)
-      at processTicksAndRejections (internal/process/task_queues.js:74:11)
+  SyntaxError: C:\xampp\htdocs\ecommerce\package.json: Unexpected token } in JSON at position 366
+      at JSON.parse (<anonymous>)
+      at C:\Users\neeel\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\neeel\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\neeel\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
 
 npm manifest: 
   {
@@ -36,8 +31,12 @@ npm manifest:
     "license": "MIT",
     "dependencies": {
       "bootstrap": "^5.1.3",
+      "feather-icons": "^4.28.0",
+      "holderjs": "^2.9.9",
       "jquery": "^3.6.0",
-      "popper.js": "^1.16.1"
+      "mysql": "^2.18.1",
+      "popper.js": "^1.16.1",
+  
     }
   }
 
@@ -49,17 +48,115 @@ Lockfile:
   # yarn lockfile v1
   
   
+  bignumber.js@9.0.0:
+    version "9.0.0"
+    resolved "https://registry.yarnpkg.com/bignumber.js/-/bignumber.js-9.0.0.tgz#805880f84a329b5eac6e7cb6f8274b6d82bdf075"
+    integrity sha512-t/OYhhJ2SD+YGBQcjY8GzzDHEk9f3nerxjtfa6tlMXfe7frs/WozhvCNoGvpM0P3bNf3Gq5ZRMlGr5f3r4/N8A==
+  
   bootstrap@^5.1.3:
     version "5.1.3"
     resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.1.3.tgz#ba081b0c130f810fa70900acbc1c6d3c28fa8f34"
     integrity sha512-fcQztozJ8jToQWXxVuEyXWW+dSo8AiXWKwiSSrKWsRB/Qt+Ewwza+JWoLKiTuQLaEPhdNAJ7+Dosc9DOIqNy7Q==
+  
+  classnames@^2.2.5:
+    version "2.3.1"
+    resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
+    integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
+  
+  core-js@^3.1.3:
+    version "3.20.3"
+    resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.20.3.tgz#c710d0a676e684522f3db4ee84e5e18a9d11d69a"
+    integrity sha512-vVl8j8ph6tRS3B8qir40H7yw7voy17xL0piAjlbBUsH7WIfzoedL/ZOr1OV9FyZQLWXsayOJyV4tnRyXR85/ag==
+  
+  core-util-is@~1.0.0:
+    version "1.0.3"
+    resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.3.tgz#a6042d3634c2b27e9328f837b965fac83808db85"
+    integrity sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==
+  
+  feather-icons@^4.28.0:
+    version "4.28.0"
+    resolved "https://registry.yarnpkg.com/feather-icons/-/feather-icons-4.28.0.tgz#e1892a401fe12c4559291770ff6e68b0168e760f"
+    integrity sha512-gRdqKESXRBUZn6Nl0VBq2wPHKRJgZz7yblrrc2lYsS6odkNFDnA4bqvrlEVRUPjE1tFax+0TdbJKZ31ziJuzjg==
+    dependencies:
+      classnames "^2.2.5"
+      core-js "^3.1.3"
+  
+  holderjs@^2.9.9:
+    version "2.9.9"
+    resolved "https://registry.yarnpkg.com/holderjs/-/holderjs-2.9.9.tgz#e0f65439ac658c4188abcea3c3b0a327d0ebb67d"
+    integrity sha512-ceWPz1MrR3dxOoZXiom+G48+l1VPG3TcjBw9fq5iwCiZAMvYX8Aia13GOxT7DoV/AcSyTH7Vvr11ygjZP9qn4w==
+  
+  inherits@~2.0.3:
+    version "2.0.4"
+    resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
+    integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
+  
+  isarray@~1.0.0:
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/isarray/-/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
+    integrity sha1-u5NdSFgsuhaMBoNJV6VKPgcSTxE=
   
   jquery@^3.6.0:
     version "3.6.0"
     resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.6.0.tgz#c72a09f15c1bdce142f49dbf1170bdf8adac2470"
     integrity sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==
   
+  mysql@^2.18.1:
+    version "2.18.1"
+    resolved "https://registry.yarnpkg.com/mysql/-/mysql-2.18.1.tgz#2254143855c5a8c73825e4522baf2ea021766717"
+    integrity sha512-Bca+gk2YWmqp2Uf6k5NFEurwY/0td0cpebAucFpY/3jhrwrVGuxU2uQFCHjU19SJfje0yQvi+rVWdq78hR5lig==
+    dependencies:
+      bignumber.js "9.0.0"
+      readable-stream "2.3.7"
+      safe-buffer "5.1.2"
+      sqlstring "2.3.1"
+  
   popper.js@^1.16.1:
     version "1.16.1"
     resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
     integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
+  
+  process-nextick-args@~2.0.0:
+    version "2.0.1"
+    resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
+    integrity sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==
+  
+  readable-stream@2.3.7:
+    version "2.3.7"
+    resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.3.7.tgz#1eca1cf711aef814c04f62252a36a62f6cb23b57"
+    integrity sha512-Ebho8K4jIbHAxnuxi7o42OrZgF/ZTNcsZj6nRKyUmkhLFq8CHItp/fy6hQZuZmP/n3yZ9VBUbp4zz/mX8hmYPw==
+    dependencies:
+      core-util-is "~1.0.0"
+      inherits "~2.0.3"
+      isarray "~1.0.0"
+      process-nextick-args "~2.0.0"
+      safe-buffer "~5.1.1"
+      string_decoder "~1.1.1"
+      util-deprecate "~1.0.1"
+  
+  routes@^2.1.0:
+    version "2.1.0"
+    resolved "https://registry.yarnpkg.com/routes/-/routes-2.1.0.tgz#475571192a48f99b6c065dd926bb75e8ae83e8a2"
+    integrity sha1-R1VxGSpI+ZtsBl3ZJrt16K6D6KI=
+  
+  safe-buffer@5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
+    version "5.1.2"
+    resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
+    integrity sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==
+  
+  sqlstring@2.3.1:
+    version "2.3.1"
+    resolved "https://registry.yarnpkg.com/sqlstring/-/sqlstring-2.3.1.tgz#475393ff9e91479aea62dcaf0ca3d14983a7fb40"
+    integrity sha1-R1OT/56RR5rqYtyvDKPRSYOn+0A=
+  
+  string_decoder@~1.1.1:
+    version "1.1.1"
+    resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-1.1.1.tgz#9cf1611ba62685d7030ae9e4ba34149c3af03fc8"
+    integrity sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==
+    dependencies:
+      safe-buffer "~5.1.0"
+  
+  util-deprecate@~1.0.1:
+    version "1.0.2"
+    resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
+    integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
