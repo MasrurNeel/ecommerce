@@ -1,0 +1,21 @@
+{
+    "name": "neeel/ecommerce",
+    "description": "Ecommerce platform in PHP",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Neeel\\Ecommerce\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MasrurNeel",
+            "email": "mikkum861@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "phpmailer/phpmailer": "^6.0"
+    }
+}

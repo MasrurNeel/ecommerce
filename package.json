@@ -1,0 +1,15 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "Ecommerce platform in PHP",
+  "main": "index.js",
+  "author": "MasrurNeel <mikum861@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "feather-icons": "^4.28.0",
+    "holderjs": "^2.9.9",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1"
+  }
+}
