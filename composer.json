@@ -3,11 +3,6 @@
     "description": "Ecommerce platform in PHP",
     "type": "project",
     "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Neeel\\Ecommerce\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "MasrurNeel",
@@ -17,7 +12,8 @@
     "minimum-stability": "stable",
     "require": {
         "phpmailer/phpmailer": "^6.0",
-        "phroute/phroute": "^2.1"
+        "phroute/phroute": "^2.1",
+        "illuminate/database": "^8.81"
     },
     "autoload":{
         "psr-4":{

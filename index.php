@@ -4,11 +4,31 @@ use Phroute\Phroute\Exception\HttpMethodNotAllowedException;
 use Phroute\Phroute\Exception\HttpRouteNotFoundException;
 use Phroute\Phroute\RouteCollector;
 use Phroute\Phroute\RouteParser;
+use Illuminate\Database\Capsule\Manager as Capsule;
+
 require_once 'vendor/autoload.php';
 
+$capsule = new Capsule();
+$capsule->addConnection([
+    'driver' => 'mysql',
+    'host' => 'localhost',
+    'database' => 'llc04_ecommerce',
+    'username' => 'root',
+    'password' => '',
+    'charset' => 'utf8',
+    'collation' => 'utf8_unicode_ci',
+    'prefix' => '',
+]);
+$capsule->setAsGlobal();
+$capsule->bootEloquent();
+
+//$users = Capsule::table('users')->get();
+//echo '<pre>';
+//var_dump($users);die();
+//echo '</pre>';
+//die();
 $router = new RouteCollector(new RouteParser());
-$router->controller('/ecommerce', \App\Controllers\HomeController::class);
-$router->controller('/users', \App\Controllers\UsersController::class);
+require_once __DIR__ . '/routes.php';
 $dispatcher = new Dispatcher($router->getData());
 try{
     $response = $dispatcher->dispatch($_SERVER['REQUEST_METHOD'], parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
@@ -20,3 +40,4 @@ try{
     die();
 }
 echo $response;
+
