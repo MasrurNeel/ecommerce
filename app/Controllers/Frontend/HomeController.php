@@ -119,6 +119,12 @@ class HomeController extends Controller {
                 }
                 if(password_verify($password, $user->password) === true){
                     $_SESSION['success']= 'Logged in';
+                    $_SESSION['users']= [
+                    'id' => $user->id,
+                    'email' => $user->email,
+                    'username' => $user->username,
+                        ];
+
                     header('Location: /dashboard');
                     exit();
                 }
@@ -154,6 +160,14 @@ class HomeController extends Controller {
         }
         $errors[] = 'Invalid token provided';
         $_SESSION['errors']= $errors;
+        header('Location: /login');
+        exit();
+    }
+    public function getLogout()
+    {
+       unset($_SESSION['user']);
+
+        $_SESSION['success']= 'You have been logged out.';
         header('Location: /login');
         exit();
     }
