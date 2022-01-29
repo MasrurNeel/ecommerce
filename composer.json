@@ -13,7 +13,9 @@
     "require": {
         "phpmailer/phpmailer": "^6.0",
         "phroute/phroute": "^2.1",
-        "illuminate/database": "^8.81"
+        "illuminate/database": "^8.81",
+        "respect/validation": "^2.2"
+
     },
     "autoload":{
         "psr-4":{

@@ -7,6 +7,7 @@ use Phroute\Phroute\RouteParser;
 use Illuminate\Database\Capsule\Manager as Capsule;
 
 require_once 'vendor/autoload.php';
+session_start();
 
 $capsule = new Capsule();
 $capsule->addConnection([
@@ -28,7 +29,9 @@ $capsule->bootEloquent();
 //echo '</pre>';
 //die();
 $router = new RouteCollector(new RouteParser());
+
 require_once __DIR__ . '/routes.php';
+
 $dispatcher = new Dispatcher($router->getData());
 try{
     $response = $dispatcher->dispatch($_SERVER['REQUEST_METHOD'], parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));

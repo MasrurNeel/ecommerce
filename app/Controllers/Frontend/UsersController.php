@@ -6,4 +6,5 @@ use App\Controllers\Controller;
      {
        $this->view('login');
      }
+
  }
