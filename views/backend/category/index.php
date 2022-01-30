@@ -48,7 +48,7 @@
                                   <td><?php echo $category->id;?></td>
                                   <td><?php echo $category->title;?>e</td>
                                   <td><?php echo $category->slug;?></td>
-                                  <td><?php echo $category->status === 1 ? 'Active' : 'Inactive';?></td>
+                                  <td><?php echo $category->active === 1 ? 'Active' : 'Inactive';?></td>
                                   <td>
                                       <a href="/dashboard/categories/edit/<?php echo $category->id;?>" class="badge badge-info">
                                          Edit
