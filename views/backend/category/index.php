@@ -14,11 +14,11 @@
                     </div>
                     <div class="from-group">
                         <label for="slug">Slug</label>
-                        <input type="text" name="slug" placeholder="Enter Title" class="form-control">
+                        <input type="text" name="slug" placeholder="Enter Slug" class="form-control">
                     </div>
                     <div class="from-group">
                         <label for="status">Status</label>
-                        <select name="active" id="" clss="form-control">
+                        <select name="active" id="" class="form-control">
                             <option value="1">Active</option>
                             <option value="0">Inactive</option>
                         </select>
@@ -26,8 +26,30 @@
                     <div class="form-group">
                         <button type="submit" class="btn btn-success btn-block">Add Category</button>
                     </div>
-
                 </form>
+                <div>
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>Title</td>
+                            <td>Slug</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                          <?php
+$categories = \App\Models\Category::all();
+                          foreach($categories as $category):
+                              ?>
+                              <tr>
+                                  <td><?php echo $category->id;?></td>
+                                  <td><?php echo $category->title;?>e</td>
+                                  <td><?php echo $category->slug;?></td>
+                              </tr>
+                         <?php endforeach;?>
+                        </tbody>
+                    </table>
+                </div>
             </main>
         </div>
     </div>

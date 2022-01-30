@@ -29,6 +29,11 @@ class CategoryController extends Controller {
                 'slug' => $slug,
                 'active' => $active,
             ]);
+            $_SESSION['success']= 'Catergory created';
+            redirect('catergories');
         }
+        $_SESSION['errors'] = $errors;
+        redirect('catergories');
+
     }
 }
