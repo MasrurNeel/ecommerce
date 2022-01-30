@@ -53,6 +53,11 @@
                                       <a href="/dashboard/categories/edit/<?php echo $category->id;?>" class="badge badge-info">
                                          Edit
                                       </a>
+                                      <a href="/dashboard/categories/delete/<?php echo $category->id;?>" class="badge badge-danger"
+                                      onclick="return confirm('Click on OK to continue.');"
+                                      >
+                                         Delete
+                                      </a>
                                   </td>
                               </tr>
                          <?php endforeach;?>

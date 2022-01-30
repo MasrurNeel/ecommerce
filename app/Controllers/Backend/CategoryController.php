@@ -75,4 +75,15 @@ class CategoryController extends Controller {
             redirect('dashboard/catergories');
         }
     }
+    public function getDelete($id = null)
+    {
+        if($id === null) {
+          redirect('dashboard/category');
+        }
+        $category = Category::find($id);
+        $category->delete();
+
+        $_SESSION['success']= 'Catergory deleted';
+        redirect('dashboard/catergories');
+    }
 }
