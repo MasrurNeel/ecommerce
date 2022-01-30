@@ -12,11 +12,11 @@ use Respect\Validation\Validator;
 class HomeController extends Controller {
      public function getIndex()
      {
-         $this->view('home');
+         view('home');
      }
      public function getRegister()
      {
-         $this->view('register');
+         view('register');
      }
      public function postRegister()
      {
@@ -27,7 +27,7 @@ class HomeController extends Controller {
          $password = $_POST['password'];
          $profile_photo = $_FILES['profile_photo'];
 //validation
-         if($validatior::alpha()->noWhitespace()->validate($username) === false){
+         if($validatior::alnum()->noWhitespace()->validate($username) === false){
             $errors['username'] = 'Username can only contain alphabets or numeric';
          }
          if(\strlen($username)<6){
@@ -93,7 +93,7 @@ class HomeController extends Controller {
      }
      public function getLogin()
      {
-         $this->view('login');
+         view('login');
      }
     public function postLogin()
     {

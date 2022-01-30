@@ -1,9 +1,9 @@
 <?php
 namespace App\Controllers\Backend;
 use App\Controllers\Controller;
-class DashboardController extends Controller {
+class ProductController extends Controller {
     public function getIndex()
     {
-        view('backend/dashboard');
+        view('product');
     }
 }
