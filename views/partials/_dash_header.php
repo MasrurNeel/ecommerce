@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LLC04 Ecommerce System</title>
     <!-- Bootstrap core CSS -->
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="<?php echo BASE_URL ;?>/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!--Custom css-->
-    <link href="assets/css/dashboard.css" rel = "stylesheet">
+    <link href="<?php echo BASE_URL;?>/assets/css/dashboard.css" rel="stylesheet">
 
     <style>
         .bd-placeholder-img {

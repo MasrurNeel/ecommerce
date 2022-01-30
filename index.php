@@ -9,6 +9,8 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 require_once 'vendor/autoload.php';
 session_start();
 
+define('BASE_URL', 'http://ecom.test/');
+
 $capsule = new Capsule();
 $capsule->addConnection([
     'driver' => 'mysql',
