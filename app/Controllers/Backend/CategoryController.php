@@ -14,7 +14,7 @@ class CategoryController extends Controller {
         $validatior = new Validator();
         $errors = [];
         $title = $_POST['title'];
-        $slug = $_POST['slug'];
+        $slug = $this->slugify($_POST['title']);
         $active = $_POST['active'];
 //validation
         if($validatior::alpha()->validate($title) === false){
@@ -58,22 +58,23 @@ class CategoryController extends Controller {
         if($validatior::alpha()->validate($title) === false){
             $errors['title'] = 'Title can only content alphabets';
         }
-        if($validatior::slug()->validate($slug) === false){
-            $errors['slug'] = 'Slug must be a valid slug';
+        if(empty($errors)){
+            try{
+                $category = Category::find($id);
+                $category->update([
+                    'title' => $title,
+                    'slug' => strtolower($slug),
+                    'active' => $active,
+                ]);
+                $_SESSION['success']= 'Catergory updated';
+                redirect('dashboard/catergories');
+            }catch(\Exception $e){
+                $_SESSION['errors'] = ['message' => $e->getMessage()];
+                redirect('dashboard/catergories');
+            }
         }
-        try{
-          $category = Category::find($id);
-          $category->update([
-              'title' => $title,
-              'slug' => strtolower($slug),
-              'active' => $active,
-          ]);
-            $_SESSION['success']= 'Catergory updated';
-            redirect('dashboard/catergories');
-        }catch(\Exception $e){
-            $_SESSION['errors'] = ['message' => $e->getMessage()];
-            redirect('dashboard/catergories');
-        }
+        $_SESSION['errors'] = $errors;
+        redirect('dashboard/catergories');
     }
     public function getDelete($id = null)
     {

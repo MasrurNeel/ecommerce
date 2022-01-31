@@ -15,8 +15,10 @@
       <w>phpmailer</w>
       <w>phroute</w>
       <w>signin</w>
+      <w>slugify</w>
       <w>smtp</w>
       <w>toggler</w>
+      <w>translit</w>
       <w>validatior</w>
     </words>
   </dictionary>
