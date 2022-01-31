@@ -54,7 +54,7 @@ class HomeController extends Controller {
                  'username' => $username,
                  'email' => $email,
                  'password' => password_hash($password, PASSWORD_BCRYPT),
-                 'profile|_photo' => $file_name.'.'.$ext,
+                 'profile_photo' => $file_name.'.'.$ext,
                  'email_verification_token' => $token,
              ]);
              //send the mail
