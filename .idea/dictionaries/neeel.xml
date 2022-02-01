@@ -14,12 +14,14 @@
       <w>navbar</w>
       <w>phpmailer</w>
       <w>phroute</w>
+      <w>referer</w>
       <w>signin</w>
       <w>slugify</w>
       <w>smtp</w>
       <w>toggler</w>
       <w>translit</w>
       <w>validatior</w>
+      <w>wishlist</w>
     </words>
   </dictionary>
 </component>
