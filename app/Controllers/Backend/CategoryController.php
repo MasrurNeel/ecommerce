@@ -7,7 +7,8 @@ use Respect\Validation\Validator;
 class CategoryController extends Controller {
     public function getIndex()
     {
-        view('backend/category/index');
+        $categories = Category::all();
+        view('backend/category/index', ['categories' => $categories]);
     }
     public function postIndex()
     {

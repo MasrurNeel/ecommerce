@@ -1,15 +1,17 @@
 <?php
 
 if(!function_exists('view')){
-    function view($view = 'index')
+    function view($view = 'index', $data = [])
     {
-        require_once  __DIR__.'/../views/' . $view.'.php';
+        extract($data, EXTR_SKIP);
+        ob_start();
+        require_once  __DIR__.'/../views/'.$view.'.php';
     }
 }
 if(!function_exists('partial_view')){
     function partial_view($view = 'index')
     {
-        require_once  __DIR__.'/../views/partials/' . $view.'.php';
+        require_once  __DIR__.'/../views/partials/'.$view.'.php';
     }
 }
 if(! function_exists('redirect')){

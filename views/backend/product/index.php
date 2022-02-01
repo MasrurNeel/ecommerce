@@ -7,7 +7,6 @@
                     <h1 class="h2">Product</h1>
                 </div>
                 <?php partial_view('_notification')?>
-                <?php $categories = \App\Models\Category::all();?>
                 <form action="/dashboard/products" class="form" method="post" enctype="multipart/form-data">
                     <div class="from-group">
                         <label for="title">Title</label>
@@ -49,7 +48,6 @@
                     </div>
                 </form>
                 <div>
-                    <?php $products = \App\Models\Product::all();?>
                     <?php if($products->count() > 0):?>
                         <table class="table table-bordered">
                             <thead>

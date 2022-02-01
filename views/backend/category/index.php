@@ -24,7 +24,6 @@
                     </div>
                 </form>
                 <div>
-                    <?php $categories = \App\Models\Category::all();?>
                     <?php if($categories->count() > 0):?>
                     <table class="table table-bordered">
                         <thead>
