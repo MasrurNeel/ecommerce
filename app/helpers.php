@@ -33,4 +33,8 @@ if(! function_exists('dd')){
       echo '</pre>';
       die();
     }
+    function auth()
+    {
+       return isset($_SESSION['user']);
+    }
 }

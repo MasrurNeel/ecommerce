@@ -15,6 +15,9 @@
                 <label for="floatingPassword">Password</label>
             </div>
             <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+            <div class="form-group">
+                <a href="/register" class="btn btn-lg btn-block btn-outline-dark">Register</a>
+            </div>
         </form>
     </div>
 </main>

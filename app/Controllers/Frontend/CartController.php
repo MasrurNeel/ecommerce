@@ -8,9 +8,10 @@ class CartController extends Controller
 {
     public function getIndex()
     {
+        $categories = Category::select(['slug', 'title'])->get();
         $cart = $_SESSION['cart'] ?: [];
         $sum = array_sum(array_column($cart, 'total_price'));
-        view('cart', ['cart' => $cart, 'sum' => $sum]);
+        view('cart', ['cart' => $cart, 'sum' => $sum, 'categories' => $categories]);
     }
     public function postIndex()
     {

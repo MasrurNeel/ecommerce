@@ -12,9 +12,15 @@ $router->filter('auth', function(){
 });
 $router->controller('/', \App\Controllers\Frontend\HomeController::class);
 $router->controller('/cart', \App\Controllers\Frontend\CartController::class);
+$router->group(['before' => 'auth'], function (RouteCollector $router){
+    $router->controller('/checkout', \App\Controllers\Frontend\CheckoutController::class);
+});
+
 
 //$router->controller('/users', \App\Controllers\Frontend\UsersController::class);
 $router->group(['before' => 'auth', 'prefix' => 'dashboard'], function(RouteCollector $router) {
     $router->controller('/', \App\Controllers\Backend\DashboardController::class);
     $router->controller('/categories', \App\Controllers\Backend\CategoryController::class);
+    $router->controller('/products', \App\Controllers\Backend\ProductController::class);
+
 });

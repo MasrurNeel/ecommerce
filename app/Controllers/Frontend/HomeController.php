@@ -21,7 +21,8 @@ class HomeController extends Controller {
      }
      public function getRegister()
      {
-         view('register');
+         $categories = Category::select(['slug', 'title'])->get();
+         view('register', ['categories' => $categories]);
      }
      public function postRegister()
      {
@@ -70,8 +71,8 @@ class HomeController extends Controller {
                  $mail->isSMTP();
                  $mail->Host = 'smtp.mailtrap.io';
                  $mail->SMTPAuth = true;
-                 $mail->Username = 'da24cc67e9bb79';
-                 $mail->Password = 'dc5778bc9b1351';
+                 $mail->Username = 'af2a20736cc551';
+                 $mail->Password = 'c617b024b04e5e';
                  $mail->SMTPSecure = 'tls';
                  $mail->Port = 2525;
                  //Recipients
@@ -82,7 +83,7 @@ class HomeController extends Controller {
                  $mail->Subject = 'Registration Successful';
                  $mail->Body = 'Dear '.$username.',</br>
       Please click the following link to activate your account</br>
-      <a href="http://ecommerce.test/activate/'.$token.'">Click Here to Activate</a>
+      <a href="http://ecom.test/activate/'.$token.'">Click Here to Activate</a>
       <br/>-LLC Team';
                  $mail->send();
              }catch (Exception $e){
@@ -98,7 +99,8 @@ class HomeController extends Controller {
      }
      public function getLogin()
      {
-         view('login');
+         $categories = Category::select(['slug', 'title'])->get();
+         view('login', ['categories' => $categories]);
      }
     public function postLogin()
     {
